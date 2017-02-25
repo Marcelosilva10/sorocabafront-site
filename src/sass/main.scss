@@ -2,9 +2,10 @@
 
 $header-height: 90px;
 
-* {
+body{
   padding: 0;
   margin: 0;
+  font-family: "Open Sans";
 }
 
 .main-header {
@@ -22,10 +23,21 @@ $header-height: 90px;
   background-color: #fff;
   height: $header-height;
   float: left;
+  vertical-align: middle;
+  line-height: 90px;
+}
+
+.logo-menu {
+  width: 95%;
+  display: inline-block;
+  line-height: 90px;
+  padding: 5px;
+  height: auto;
+  vertical-align: middle;
 }
 
 .menu {
-  float: right;
+  display:inline-block;
   text-align: right;
   //display: flex;
   justify-content: space-around;
@@ -39,8 +51,9 @@ $header-height: 90px;
 .menu li {
   display: inline-block;
   height: 100%;
-  background-color: gray;
+  background-color: #25aae1;
   list-style: none;
+
 
   //margin-top: calc(90px / 2.5);
 }
@@ -56,11 +69,18 @@ $header-height: 90px;
   //height: $header-height;
   //padding-top: calc(90px / 2.5);
   display: table-cell;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .menu li a:hover {
-  background-color: #ff0;
+  background-color: #FFF;
+  color:#25aae1;
 }
 .social-media {
   display: none;
+}
+
+.fa-color{
+   color:white;
 }
