@@ -1,0 +1,66 @@
+@import "project/grid";
+
+$header-height: 90px;
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.main-header {
+  height: 90px;
+  //display: table;
+  background-color: #25aae1;
+}
+
+// header {
+//    width: 100%;
+//    height: $header-height;
+// }
+
+.logo {
+  background-color: #fff;
+  height: $header-height;
+  float: left;
+}
+
+.menu {
+  float: right;
+  text-align: right;
+  //display: flex;
+  justify-content: space-around;
+  //height: $header-height;
+  align-items: center;
+  //justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  display: inline-block;
+  height: 100%;
+  background-color: gray;
+  list-style: none;
+
+  //margin-top: calc(90px / 2.5);
+}
+
+.menu li a {
+  height: 100%;
+  line-height: 90px;
+  vertical-align: middle;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  //height: $header-height;
+  //padding-top: calc(90px / 2.5);
+  display: table-cell;
+}
+
+.menu li a:hover {
+  background-color: #ff0;
+}
+.social-media {
+  display: none;
+}
