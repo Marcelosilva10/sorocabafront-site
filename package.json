@@ -9,7 +9,8 @@
     "gulp": "^3.9.1",
     "gulp-compass": "^2.1.0",
     "gulp-sass": "^3.0.0",
-    "gulp-sourcemaps": "^1.9.1"
+    "gulp-sourcemaps": "^1.9.1",
+    "run-sequence": "^1.2.2"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

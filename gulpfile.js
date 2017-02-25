@@ -2,6 +2,7 @@ var gulp = require('gulp'),
 sass = require('gulp-sass'),
 compass = require('gulp-compass'),
 sourcemaps = require('gulp-sourcemaps'),
+runSequence = require('run-sequence'),
 browserSync = require('browser-sync').create();
 
 var config = {
@@ -54,8 +55,22 @@ gulp.task('compass', function() {
 
 gulp.task('watch', ['browserSync'], function() {
     gulp.watch(config.srcPath+'sass/**/*.+(scss|sass)', ['sass']);
+    gulp.watch([
+      config.distPath+'fonts/**/*',
+      config.distPath+'js/**/*.js',
+      config.distPath+'img/**/*.*',
+      config.distPath+'*.html'
+    ], browserSync.reload);
 });
 
 gulp.task('watch-compass', ['browserSync'], function() {
     gulp.watch(config.srcPath+'sass/**/*.+(scss|sass)', ['compass']);
+});
+
+
+//Tarefa padrão do Gulp
+gulp.task('default', function (callback) {
+  runSequence(['sass', 'browserSync', 'watch'],
+    callback
+  )
 });
